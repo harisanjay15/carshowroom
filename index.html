@@ -2,6 +2,12 @@
 <html>
 	<head>
 		<title> CAR SHOWROOM</TITLE>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 		
 	
 	
@@ -22,7 +28,19 @@
   background-color: #333;
 }
 
+bb {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
 li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+button {
   float: left;
   border-right:1px solid #bbb;
 }
@@ -30,8 +48,18 @@ li {
 li:last-child {
   border-right: none;
 }
-
+button:last-child {
+  border-right: none;
+}
 li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+button a {
   display: block;
   color: white;
   text-align: center;
@@ -43,10 +71,14 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
-.active {
-  background-color: #51B9DF;
+button a:hover:not(.active) {
+  
 }
-	}
+
+.active {
+  background-color: #e77162;
+}
+}
 	</style>
 	 
 	</head>
@@ -54,18 +86,20 @@ li a:hover:not(.active) {
 	
 	
 		<p><h1 style=color:white align="center" ><b><u>CAR SHOWROOM</u></h1></p>
-	
 
-		<ul style=color:red>
-			<li><a class = "active" href="#brands">Home</a> </li>
-			<li><a href="#brands">Popular Brands</a> </li>
-			<li><a href="#table">Popular Models</a></li>
-			<li><a href="#video">video</a></li>
-			<li style="float:right"><a href="login.html">Log In</a></li>
-			<li style="float:right"><a href="signup.html">Sign Up</a></li>
-		</ul>  
+			<div class="btn-group bb container-fluid" width=100%>
+				 <button type="button"  class="btn btn-danger"><a href="#brands">Home</a></button>
+				 <button type="button" class="btn btn-primary"><a href="#brands">Popular Brands</a> </>
+				 <button type="button" class="btn btn-primary"><a href="#table">Popular Models</a></>
+				 <button type="button" class="btn btn-primary"><a href="#video">video</a></>
+				 <button style="float:right" type="button" class="btn btn-primary"><a href="login.html">Log In</a></>
+				 <button style="float:right" type="button" class="btn btn-primary"><a href="signup.html">Sign Up</a></>
+		
+			</div>
+
+			
 	
-		<img src="bg_img.jpg" alt=car width=100% height=600 align="center">
+		<img src="cv_img.jpg" class="rounded-circle" alt=car width=100% height=600 align="center">
 		<br>
 		<br>
 		<br>
@@ -74,29 +108,37 @@ li a:hover:not(.active) {
 		
 		<p ><h3 id="brands" style="color:red" align="center">Popular Brands:</h3></p>
 		
+		<div class="container-fluid">
+			
 		
-		<a href="https://www.bmw.com">
-		<img src="bmw_logo.png" alt="bmw" height="200" width="250" >
-		</a>
-		<a href="https://www.audi.in">
-		<img src="audi_logo.gif" alt="audi" height="200" width="250" >
-		</a>
-		<a href="https://www.mercedes-benz.co.in">
-		<img src="benz_logo.png" alt="benze" height="200" width="250" >
-		</a>
-		<a href="https://www.volkswagen.co.in">
-		<img src="vw_logo.png" alt="volkswagen" height="200" width="250" >
-		</a>
-		<a href="https://www.lamborghini.com">
-		<img src="Lamb1_logo.png" alt="lambo" height="200" width="250" >
-		</a>
+			
+		
+			<a href="https://www.bmw.com">
+				<img src="bmw_logo.png" alt="bmw" height="200" width="250" >
+			</a>
+			<a href="https://www.audi.in">
+				<img src="audi_logo.gif" alt="audi" height="200" width="250" >
+			</a>
+			<a href="https://www.mercedes-benz.co.in">
+				<img src="benz_logo.png" alt="benze" height="200" width="250" >
+			</a>
+			<a href="https://www.volkswagen.co.in">
+				<img src="vw_logo.png" alt="volkswagen" height="200" width="250" >
+			</a>
+			<a href="https://www.lamborghini.com">
+				<img src="lamb1_logo.png" alt="lambo" height="200" width="250" >
+			</a>
+		</div>
+		
 		<br><br><br>
+		<h3 style="color:red" > Popular Models </h3>
 		<table id="table" cellpadding ="10" cellspacing="12" align="center" style="width:70%;height:30%;text-align:center; background-color:black;">
 		<caption>
-		<h3 style="color:red" > Popular Models </h3>
+		
 		</caption>
 		
 		<thead>
+		
 		<tr>
 			<th style=background-color:white;>BRAND</th>
 			<th style=background-color:white;>MODELM</th>
@@ -104,38 +146,43 @@ li a:hover:not(.active) {
 			<th style=background-color:white;>MAX TORQUE</th>
 			<th style=background-color:white;>Cost in India </th>
 		</tr>
+		
 		</thead>
 		
 		<tr>
-			<th style=background-color:yellow ;>BMW</th>
-			<th style=background-color:yellow;>BMW X7</th>
-			<th style=background-color:yellow;>2993/2998 cc</th>
-			<th style=background-color:yellow;>760/420/620 Nm</th>
-			<th style=background-color:yellow;>₹ 92.5 Lakh</th>
+			<th style=background-color:rgb(224,66,66);>BMW</th>
+			<th style=background-color:rgb(224,66,66);>BMW X7</th>
+			<th style=background-color:rgb(224,66,66);>2993/2998 cc</th>
+			<th style=background-color:rgb(224,66,66);>760/420/620 Nm</th>
+			<th style=background-color:rgb(224,66,66);>₹ 92.5 Lakh</th>
 		</tr>
 		
 		<tr>
-			<th style=background-color:yellow ;>AUDI</th>
-			<th style=background-color:yellow;>AUDI A6</th>
-			<th style=background-color:yellow;>1984 cc</th>
-			<th style=background-color:yellow;>370 Nm</th>
-			<th style=background-color:yellow;>₹ 54.43 Lakh</th>
+			<th style=background-color:rgb(224,66,66);>AUDI</th>
+			<th style=background-color:rgb(224,66,66);>AUDI A6</th>
+			<th style=background-color:rgb(224,66,66);>1984 cc</th>
+			<th style=background-color:rgb(224,66,66);>370 Nm</th>
+			<th style=background-color:rgb(224,66,66);>₹ 54.43 Lakh</th>
 		</tr>
 		
 		<tr>
-			<th style=background-color:yellow;>BENZE</th>
-			<th style=background-color:yellow;>Mercedes-Benz C-Class</th>
-			<th style=background-color:yellow;>1950 cc</th>
-			<th style=background-color:yellow;>320 Nm</th>
-			<th style=background-color:yellow;>Rs. 40.9 Lakh</th>
+			<th style=background-color:rgb(224,66,66);>BENZE</th>
+			<th style=background-color:rgb(224,66,66);>Mercedes-Benz C-Class</th>
+			<th style=background-color:rgb(224,66,66);>1950 cc</th>
+			<th style=background-color:rgb(224,66,66);>320 Nm</th>
+			<th style=background-color:rgb(224,66,66);>Rs. 40.9 Lakh</th>
 		</tr>
 		
 		</table>
-		<p > <h3 style=color:red>Car Reviews </h3></p>
-		<iframe id="video" width="400" height="315" src="https://www.youtube.com/embed/hsb-fA6ApiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<iframe width="400" height="315" src="https://www.youtube.com/embed/9XAX6Rh6flM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<div class="container-fluid">
+			
+		
+			<p > <h3 style=color:red>Car Reviews </h3></p>
+			<iframe id="video" width="400" height="315" src="https://www.youtube.com/embed/hsb-fA6ApiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="400" height="315" src="https://www.youtube.com/embed/9XAX6Rh6flM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<iframe width="400" height="315" src="https://www.youtube.com/embed/FDvomkLC4aE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	
+		</div>
 		<footer style=background-color:white>
 			<p><h3><b>About us: </b>   </h3>
 			<h4>Contact:</h4>    
@@ -144,3 +191,8 @@ li a:hover:not(.active) {
 
 	</body>
 </html>
+
+
+
+
+
